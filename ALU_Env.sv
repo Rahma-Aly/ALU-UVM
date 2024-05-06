@@ -25,14 +25,10 @@ class ALU_Env extends uvm_env;
   endfunction
 
   virtual function void connect_phase (uvm_phase phase);
-       super.connect_phase(phase);
        alu_agnt.alu_monitor.ap.connect(alu_scrbrd.analysis_export);
        alu_agnt.alu_monitor.ap.connect(alu_coverage.analysis_export); 
   endfunction
 
 
-  task run_phase (uvm_phase phase);
-    super.run_phase(phase);
-  endtask: run_phase
 endclass
 `endif
