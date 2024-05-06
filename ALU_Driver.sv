@@ -35,8 +35,6 @@ class ALU_Driver extends uvm_driver #(ALU_Transaction);
        alu_vi.in1       <= alu_trans.in1;
        alu_vi.in2       <= alu_trans.in2;
        alu_vi.opcode    <= alu_trans.opcode;
-       alu_vi.out       <= alu_trans.out; 
-
        //finish driving transaction
        seq_item_port.item_done();
     end
